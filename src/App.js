@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { Beans } from "./components/Beans";
+import "./App.css";
 
-function App() {
+function App({ age }) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Beans name="mr bean" age={2048 * 2}/>
+      <SomeText />
+      <SomeText />
+      <SomeText />
     </div>
   );
+}
+
+function SomeText() {
+  return <p>hello, this is some text!</p>;
 }
 
 export default App;
